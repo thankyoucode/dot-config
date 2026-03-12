@@ -1,13 +1,39 @@
 {
-  // Editor Core Settings
+  // minimal view
+  // "editor.lineNumbers": "off",
+  "window.menuBarVisibility": "compact",
+  "workbench.activityBar.location": "hidden",
+  // "workbench.editor.showTabs": "single",
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  // "workbench.statusBar.visible": false,
+  // "editor.scrollbar.vertical": "visible",
+  // Core Settings
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editor.enablePreview": false,
   "editor.fontSize": 14,
   "editor.lineHeight": 22,
-  "editor.fontFamily": "'Fira Code', 'JetBrains Mono'",
-  "editor.wordWrap": "on",
   "editor.tabSize": 2,
-  "editor.inlineSuggest.enabled": true,
+  "editor.fontFamily": "'Fira Code', 'JetBrains Mono'",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'JetBrains Mono'",
+  "editor.wordWrap": "on",
   "editor.cursorSmoothCaretAnimation": "on",
-  // Performance
+  "editor.autoClosingBrackets": "always",
+  "editor.cursorBlinking": "solid",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.stickyScroll.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "code-runner.runInTerminal": true,
+  // Editor Performance & Relibility
   "files.exclude": {
     "**/.svn": true,
     "**/.hg": true,
@@ -18,26 +44,41 @@
     "**/*.pyc": true,
     "**/*.log": true,
     "**/.cache": true,
-    "**/node_modules": false,
-    "**/.venv": false
+    "**/node_modules": true,
+    "**/.venv": false,
+    "**/venv": true,
+    "**/.git": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/.hg/store/**": true,
     "**/node_modules/**": true,
-    "**/venv/**": true
+    "**/venv/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.cache/**": true
   },
+  "window.restoreWindows": "none",
   "explorer.compactFolders": false,
+  "workbench.startupEditor": "none",
+  "workbench.enableExperiments": false,
+  "workbench.editor.restoreViewState": false,
   "editor.largeFileOptimizations": true,
-  // Terminal Configuration
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "'Fira Code', 'JetBrains Mono', Cascadia Code, Consolas, 'Courier New', monospace",
-  "code-runner.runInTerminal": true,
-  // Formatting & Saving
+  "editor.occurrencesHighlight": "off",
+  "editor.codeLens": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "update.mode": "none",
+  "files.restoreUndoStack": false,
+  "telemetry.telemetryLevel": "off",
+  // Formatting
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -50,24 +91,38 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true
   },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   // Language, Library, Framework Settings
+  "python.analysis.enableTroubleshootMissingImports": true,
+  "python.analysis.generateWithTypeAnnotation": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoImportCompletions": true,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.paths": true,
   "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.format.enable": true,
+  "svelte.plugin.svelte.format.config.svelteStrictMode": true,
   "makefile.configureOnOpen": true,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.sqlite3": "sqlite-viewer.view",
+    "*.o": "default"
+  },
   // Git Integration
   "git.autofetch": true,
   "git.confirmSync": false,
-  "breadcrumbs.enabled": false,
-  "workbench.colorTheme": "One Dark Pro Night Flat",
-  "editor.stickyScroll.enabled": false,
+
   // More Settings
   "editor.linkedEditing": true,
   "application.shellEnvironmentResolutionTimeout": 30,
-  "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "*.sqlite3": "sqlite-viewer.view"
-  },
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -82,37 +137,5 @@
     "*.sdb": "${capture}.${extname}-*",
     "*.s3db": "${capture}.${extname}-*"
   },
-  "editor.autoClosingBrackets": "always",
-  "python.analysis.completeFunctionParens": true,
-  "python.analysis.autoImportCompletions": true,
-  "chat.commandCenter.enabled": false,
-  "workbench.navigationControl.enabled": false,
-  "explorer.confirmDelete": false,
-  "editor.minimap.enabled": false,
-  // svelte syntex highlight
-  "svelte.plugin.svelte.format.enable": true,
-  "svelte.plugin.svelte.format.config.svelteStrictMode": true,
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-  //
-  "explorer.confirmDragAndDrop": false,
-  "workbench.startupEditor": "none",
-  "editor.cursorBlinking": "solid",
-  "workbench.activityBar.location": "hidden",
-  "python.analysis.typeCheckingMode": "standard",
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.stickyScroll.enabled": false,
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": "multiple",
-  "window.menuBarVisibility": "compact",
-  "workbench.layoutControl.enabled": false,
-  "window.commandCenter": false,
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
-  },
-  "python.analysis.enableTroubleshootMissingImports": true,
-  "python.analysis.generateWithTypeAnnotation": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "workbench.tree.enableStickyScroll": false
+  "extensions.ignoreRecommendations": true
 }

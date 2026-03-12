@@ -4,5 +4,5 @@ ThankYouCode Config and Settings For tools I use every day.
 
 - VSCode
 - Bash
-- Zsh
-- vim
+- ZSH
+- VIM
