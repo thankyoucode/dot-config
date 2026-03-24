@@ -1,14 +1,15 @@
 {
+  // more minimal view
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": false,
+  // "workbench.editor.showTabs": "single",
   // minimal view
   // "editor.lineNumbers": "off",
   "window.menuBarVisibility": "compact",
   "workbench.activityBar.location": "hidden",
-  // "workbench.editor.showTabs": "single",
   "workbench.navigationControl.enabled": false,
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
-  // "workbench.statusBar.visible": false,
-  // "editor.scrollbar.vertical": "visible",
   // Core Settings
   "workbench.colorTheme": "Atom One Dark",
   "workbench.tree.enableStickyScroll": false,
@@ -31,8 +32,6 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.stickyScroll.enabled": false,
-  "chat.commandCenter.enabled": false,
-  "code-runner.runInTerminal": true,
   // Editor Performance & Relibility
   "files.exclude": {
     "**/.svn": true,
@@ -44,7 +43,7 @@
     "**/*.pyc": true,
     "**/*.log": true,
     "**/.cache": true,
-    "**/node_modules": true,
+    "**/node_modules": false,
     "**/.venv": false,
     "**/venv": true,
     "**/.git": true
@@ -105,8 +104,7 @@
   "python.analysis.typeCheckingMode": "standard",
   "python.analysis.completeFunctionParens": true,
   "python.analysis.autoImportCompletions": true,
-  "javascript.suggest.autoImports": true,
-  "typescript.suggest.paths": true,
+  "js/ts.suggest.autoImports": true,
   "svelte.enable-ts-plugin": true,
   "svelte.plugin.svelte.format.enable": true,
   "svelte.plugin.svelte.format.config.svelteStrictMode": true,

@@ -1,0 +1,5 @@
+window-padding-color = background
+font-size = 18
+font-feature = -liga
+
+config-file = ?auto/theme.ghostty
